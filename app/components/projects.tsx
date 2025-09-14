@@ -94,7 +94,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-800 dark:to-slate-900">
+    <section id="projects" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience 
             in web development, mobile apps, and full-stack solutions.
@@ -127,7 +127,7 @@ const Projects = () => {
               onClick={() => setActiveFilter(category.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
                 activeFilter === category.id
-                  ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg"
+                  ? "bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg"
                   : "bg-white dark:bg-slate-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 border border-gray-200 dark:border-gray-700"
               }`}
             >
@@ -147,17 +147,17 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-                project.featured ? "ring-2 ring-purple-500/20" : ""
+                project.featured ? "ring-2 ring-red-500/20" : ""
               }`}
             >
-              <div className="relative h-48 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20">
+              <div className="relative h-48 bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/20 dark:to-red-800/20">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl text-purple-500/30">
+                  <div className="text-6xl text-red-500/30">
                     <Code className="h-16 w-16" />
                   </div>
                 </div>
                 {project.featured && (
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-red-700 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </div>
                 )}
@@ -194,7 +194,7 @@ const Projects = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all duration-300"
                   >
                     <ExternalLink className="h-4 w-4" />
                     Live Demo
