@@ -8,6 +8,7 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Home, User, Briefcase, Mail } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { name: "Home", link: "#home", icon: <Home className="h-4 w-4" /> },
@@ -73,6 +74,7 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </a>
         ))}
+        <ThemeToggle />
       </motion.div>
     </AnimatePresence>
   );
