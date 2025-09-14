@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Code, Palette, Database, Smartphone, Globe, Zap } from "lucide-react";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+
 
 const About = () => {
   const skills = [
@@ -28,9 +30,9 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
           <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
-            I'm a passionate full-stack developer with a love for creating beautiful, 
-            functional, and user-centered digital experiences. With expertise in modern 
-            web technologies and a keen eye for design, I bring ideas to life through code.
+            I'm Reza, a Computer Information Systems student at the Univeristy of Houston with hands-on experience in 
+            Python development, UI/UX design, and systems configuration, 
+            seeking a 2025 IT Analyst/Cybersecurity internship. 
           </p>
         </motion.div>
 

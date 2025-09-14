@@ -4,6 +4,8 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
+
+
 const Home = () => {
   return (
     <section id="home" className="flex items-center justify-center bg-gradient-to-br from-black via-red-900 to-black dark:bg-black w-full min-h-screen gap-4 m-0 p-0 overflow-hidden">
