@@ -59,28 +59,16 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: <Github className="h-6 w-6" />,
+      icon: <Github className="h-6 w-6" />, 
       name: "GitHub",
-      url: "https://github.com/yourusername",
+  url: "https://github.com/rhkazmi2005",
       color: "hover:text-gray-900 dark:hover:text-white"
     },
     {
-      icon: <Linkedin className="h-6 w-6" />,
+      icon: <Linkedin className="h-6 w-6" />, 
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+  url: "https://www.linkedin.com/in/reza-kazmi/",
       color: "hover:text-blue-600"
-    },
-    {
-      icon: <Twitter className="h-6 w-6" />,
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: <Instagram className="h-6 w-6" />,
-      name: "Instagram",
-      url: "https://instagram.com/yourusername",
-      color: "hover:text-pink-500"
     }
   ];
 
