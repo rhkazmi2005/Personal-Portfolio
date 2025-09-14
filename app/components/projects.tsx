@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ExternalLink, Github, Calendar, Code, Palette, Database } from "lucide-react";
 
 const Projects = () => {
@@ -94,8 +95,9 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black dark:from-gray-900 dark:to-black light:from-gray-50 light:to-white">
-      <div className="max-w-7xl mx-auto">
+    <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
+      <section id="projects" className="w-full">
+        <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,82 +154,3 @@ const Projects = () => {
             >
               <div className="relative h-48 bg-gradient-to-br from-red-900/20 to-red-800/20">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl text-red-500/30">
-                    <Code className="h-16 w-16" />
-                  </div>
-                </div>
-                {project.featured && (
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-red-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Featured
-                  </div>
-                )}
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-white">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Calendar className="h-4 w-4" />
-                    {project.date}
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all duration-300"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 transition-all duration-300"
-                  >
-                    <Github className="h-4 w-4" />
-                    Code
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {filteredProjects.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-12"
-          >
-            <p className="text-gray-400 text-lg">
-              No projects found in this category.
-            </p>
-          </motion.div>
-        )}
-      </div>
-    </section>
-  );
-};
-
-export default Projects;

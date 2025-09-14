@@ -13,7 +13,6 @@ import { ThemeToggle } from "./theme-toggle";
 const navItems = [
   { name: "Home", link: "#home", icon: <Home className="h-4 w-4" /> },
   { name: "About", link: "#about", icon: <User className="h-4 w-4" /> },
-  { name: "Projects", link: "#projects", icon: <Briefcase className="h-4 w-4" /> },
   { name: "Contact", link: "#contact", icon: <Mail className="h-4 w-4" /> },
 ];
 

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-  <HeroHighlight containerClassName="py-20 px-4 bg-gradient-to-b from-red-950 to-red-900 dark:from-black dark:to-gray-900 light:from-red-100 light:to-white">
+  <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
       <section id="about">
   <div className="max-w-6xl mx-auto bg-transparent p-8">
           <motion.div

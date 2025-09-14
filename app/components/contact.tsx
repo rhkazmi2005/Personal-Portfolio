@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Contact = () => {
@@ -37,22 +38,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-6 w-6" />,
+      icon: <Mail className="h-6 w-6" />, 
       title: "Email",
       value: "rezakazmi2005@gmail.com",
       link: "rezakazmi2005@gmail.com"
     },
     {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      icon: <MapPin className="h-6 w-6" />, 
+      title: "Location",
+      value: "Houston, TX",
+      link: "#"
     },
     {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Location",
-      value: "San Francisco, CA",
-      link: "#"
+      icon: <Phone className="h-6 w-6" />, 
+      title: "Phone",
+      value: "+1 (469) 748-6707",
+      link: "tel:+15551234567"
     }
   ];
 
@@ -84,8 +85,9 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 dark:from-black dark:to-gray-900 light:from-gray-100 light:to-white">
-      <div className="max-w-6xl mx-auto">
+    <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
+      <section id="contact" className="w-full">
+        <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,19 +105,19 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+  <div className="w-full flex flex-col items-center">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="w-full"
           >
             <h3 className="text-2xl font-bold text-white mb-8">
               Let's Connect
             </h3>
-            
-            <div className="space-y-6 mb-8">
+            <div className="flex flex-row gap-6 mb-8 justify-center items-stretch w-full px-2 whitespace-nowrap overflow-x-auto">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -124,16 +126,16 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group"
+                  className="flex flex-col items-center justify-center gap-2 p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-[300px] flex-shrink-0 break-all text-center mx-2 align-top"
                 >
-                  <div className="p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center justify-center p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg group-hover:scale-110 transition-transform duration-300">
                     {info.icon}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-white">
+                  <div className="flex flex-col items-center justify-center w-full">
+                    <h4 className="font-semibold text-white mb-1">
                       {info.title}
                     </h4>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 break-all w-full">
                       {info.value}
                     </p>
                   </div>
@@ -166,108 +168,10 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Send a Message
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent bg-gray-700 text-white"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent bg-gray-700 text-white"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white"
-                  placeholder="Project Inquiry"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-              
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-red-500 to-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:from-red-600 hover:to-red-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-5 w-5" />
-                    Send Message
-                  </>
-                )}
-              </motion.button>
-            </form>
-          </motion.div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </HeroHighlight>
   );
 };
 
