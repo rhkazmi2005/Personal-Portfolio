@@ -98,59 +98,73 @@ const Projects = () => {
     <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
       <section id="projects" className="w-full">
         <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-            My Projects
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience 
-            in web development, mobile apps, and full-stack solutions.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
+              My Projects
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
+            <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
+              Here are some of my recent projects that showcase my skills and experience 
+              in web development, mobile apps, and full-stack solutions.
+            </p>
+          </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
-                activeFilter === category.id
-                  ? "bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700"
-              }`}
-            >
-              {category.icon}
-              <span className="font-medium">{category.name}</span>
-            </button>
-          ))}
-        </motion.div>
+          {/* Filter Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveFilter(category.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
+                  activeFilter === category.id
+                    ? "bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700"
+                }`}
+              >
+                {category.icon}
+                <span className="font-medium">{category.name}</span>
+              </button>
+            ))}
+          </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-700 ${
-                project.featured ? "ring-2 ring-red-500/20" : ""
-              }`}
-            >
-              <div className="relative h-48 bg-gradient-to-br from-red-900/20 to-red-800/20">
-                <div className="absolute inset-0 flex items-center justify-center">
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-700 ${
+                  project.featured ? "ring-2 ring-red-500/20" : ""
+                }`}
+              >
+                <div className="relative h-48 bg-gradient-to-br from-red-900/20 to-red-800/20">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Your project image/content here */}
+                  </div>
+                </div>
+                {/* Add the rest of your project card content here */}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </HeroHighlight> // ← THIS CLOSING TAG WAS MISSING
+  );
+};
+
+export default Projects;
