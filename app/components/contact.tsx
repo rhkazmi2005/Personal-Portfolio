@@ -84,7 +84,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 dark:from-black dark:to-gray-900">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 dark:from-black dark:to-gray-900 light:from-gray-100 light:to-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,11 +93,11 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from you. 
             Let's discuss how we can work together to bring your ideas to life.
           </p>

@@ -14,7 +14,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 dark:from-black dark:to-gray-900">
+    <section id="about" className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 dark:from-black dark:to-gray-900 light:from-gray-100 light:to-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,11 +23,11 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
             About Me
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
             I'm a passionate full-stack developer with a love for creating beautiful, 
             functional, and user-centered digital experiences. With expertise in modern 
             web technologies and a keen eye for design, I bring ideas to life through code.
