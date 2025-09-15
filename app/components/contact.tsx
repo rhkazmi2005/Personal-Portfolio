@@ -84,8 +84,8 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-            <span className="inline-block px-8 py-3 rounded-full bg-white/10 border border-white/20 shadow-lg backdrop-blur-md">
-              <span className="bg-gradient-to-r from-red-400 via-red-600 to-red-700 bg-clip-text text-transparent text-4xl md:text-5xl font-bold tracking-tight">
+            <span className="group inline-block px-8 py-3 rounded-full bg-[#232325]/80 border border-white/20 shadow-lg transition duration-300 hover:bg-[#232325]/60 cursor-pointer">
+              <span className="bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-4xl md:text-5xl font-extrabold tracking-tight">
                 Get In Touch
               </span>
             </span>

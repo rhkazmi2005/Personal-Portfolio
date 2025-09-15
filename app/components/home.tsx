@@ -28,8 +28,8 @@ const Home = () => {
             transition={{ delay: 2, duration: 1 }}
             className="mt-6"
           >
-            <span className="inline-block px-8 py-3 rounded-full bg-white/10 border border-white/20 shadow-lg backdrop-blur-md">
-              <span className="bg-gradient-to-r from-red-400 via-red-600 to-red-700 bg-clip-text text-transparent text-lg md:text-xl font-bold tracking-tight">
+            <span className="group inline-block px-8 py-3 rounded-full bg-[#232325]/80 border border-white/20 shadow-lg transition duration-300 hover:bg-[#232325]/60 cursor-pointer">
+              <span className="bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-lg md:text-xl font-extrabold tracking-tight">
                 Full-Stack Developer & UI/UX Enthusiast
               </span>
             </span>
