@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, FileText, Twitter, Instagram } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -69,6 +69,12 @@ const Contact = () => {
       name: "LinkedIn",
   url: "https://www.linkedin.com/in/reza-kazmi/",
   color: "hover:text-red-600"
+    },
+    {
+      icon: <FileText className="h-6 w-6" />,
+      name: "Resume",
+      url: "/resume.pdf", // You'll need to add your resume PDF file to the public folder
+      color: "hover:text-red-600"
     }
   ];
 
