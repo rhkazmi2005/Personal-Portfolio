@@ -34,14 +34,6 @@ const Home = () => {
               </span>
             </span>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3, duration: 1 }}
-            className="mt-4 text-white text-sm md:text-base max-w-xl"
-          >
-            Crafting digital experiences with modern technologies
-          </motion.div>
         </div>
       </section>
     </HeroHighlight>
