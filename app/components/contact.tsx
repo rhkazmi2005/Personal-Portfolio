@@ -91,7 +91,7 @@ const Contact = () => {
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-          <p className="text-lg text-white max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto"> 
             Please do not hesitate to contact me with any questions or inquiries!
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ const Contact = () => {
             className="w-full"
           >
             <h3 className="text-2xl font-bold text-white mb-8">
-              Let's Connect
+              Contact Information
             </h3>
             <div className="flex flex-row gap-6 mb-8 justify-center items-stretch w-full px-2 whitespace-nowrap overflow-x-auto">
               {contactInfo.map((info, index) => (
@@ -137,7 +137,7 @@ const Contact = () => {
             {/* Social Links */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">
-                Follow Me
+            
               </h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
