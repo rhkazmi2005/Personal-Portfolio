@@ -92,8 +92,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
           <p className="text-lg text-white max-w-3xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's discuss how we can work together to bring your ideas to life.
+            Please do not hesitate to contact me with any questions or inquiries!
           </p>
         </motion.div>
 
