@@ -9,7 +9,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 const Home = () => {
   return (
-  <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
+  <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
       <section id="home" className="w-full">
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
           <TypingAnimation
@@ -26,15 +26,19 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 1 }}
-            className="mt-6 text-white/80 text-lg md:text-xl max-w-2xl"
+            className="mt-6"
           >
-            <Highlight className="bg-gradient-to-r from-red-500 to-red-700 text-white">Full-Stack Developer & UI/UX Enthusiast</Highlight>
+            <span className="inline-block px-8 py-3 rounded-full bg-white/10 border border-white/20 shadow-lg backdrop-blur-md">
+              <span className="bg-gradient-to-r from-red-400 via-red-600 to-red-700 bg-clip-text text-transparent text-lg md:text-xl font-bold tracking-tight">
+                Full-Stack Developer & UI/UX Enthusiast
+              </span>
+            </span>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 3, duration: 1 }}
-            className="mt-4 text-white/60 text-sm md:text-base max-w-xl"
+            className="mt-4 text-white text-sm md:text-base max-w-xl"
           >
             Crafting digital experiences with modern technologies
           </motion.div>

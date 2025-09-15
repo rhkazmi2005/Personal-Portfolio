@@ -62,18 +62,18 @@ const Contact = () => {
       icon: <Github className="h-6 w-6" />, 
       name: "GitHub",
   url: "https://github.com/rhkazmi2005",
-      color: "hover:text-gray-900 dark:hover:text-white"
+  color: "hover:text-red-600"
     },
     {
       icon: <Linkedin className="h-6 w-6" />, 
       name: "LinkedIn",
   url: "https://www.linkedin.com/in/reza-kazmi/",
-      color: "hover:text-blue-600"
+  color: "hover:text-red-600"
     }
   ];
 
   return (
-    <HeroHighlight containerClassName="py-20 px-4 bg-black min-h-screen flex items-center justify-center">
+  <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
       <section id="contact" className="w-full">
         <div className="max-w-6xl mx-auto">
         <motion.div
@@ -84,10 +84,14 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-            Get In Touch
+            <span className="inline-block px-8 py-3 rounded-full bg-white/10 border border-white/20 shadow-lg backdrop-blur-md">
+              <span className="bg-gradient-to-r from-red-400 via-red-600 to-red-700 bg-clip-text text-transparent text-4xl md:text-5xl font-bold tracking-tight">
+                Get In Touch
+              </span>
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from you. 
             Let's discuss how we can work together to bring your ideas to life.
           </p>
@@ -123,7 +127,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-white mb-1">
                       {info.title}
                     </h4>
-                    <p className="text-gray-300 break-all w-full">
+                    <p className="text-white break-all w-full">
                       {info.value}
                     </p>
                   </div>
