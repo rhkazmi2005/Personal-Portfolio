@@ -54,7 +54,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-red-500/20 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-[0px_2px_3px_-1px_rgba(220,38,38,0.1),0px_1px_0px_0px_rgba(220,38,38,0.02),0px_0px_0px_1px_rgba(220,38,38,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-red-500/20 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-[0px_2px_3px_-1px_rgba(220,38,38,0.1),0px_1px_0px_0px_rgba(220,38,38,0.02),0px_0px_0px_1px_rgba(220,38,38,0.08)] z-[5000] px-8 py-2 items-center justify-center space-x-8",
           className
         )}
       >
@@ -70,7 +70,7 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </a>
         ))}
-        <ThemeToggle />
+  {/* ThemeToggle removed as requested */}
       </motion.div>
     </AnimatePresence>
   );
