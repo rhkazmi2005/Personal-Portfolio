@@ -79,9 +79,9 @@ const Contact = () => {
   ];
 
   return (
-  <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
+  <HeroHighlight containerClassName="py-12 px-4 sm:px-6 bg-black min-h-screen flex items-center justify-center">
       <section id="contact" className="w-full">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,9 +89,9 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-            <span className="group inline-block px-8 py-3 rounded-full bg-[#232325]/80 border border-white/20 shadow-lg transition duration-300 hover:bg-[#232325]/60 cursor-pointer">
-              <span className="bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-4xl md:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
+            <span className="group inline-block px-4 sm:px-8 py-2 sm:py-3 rounded-full bg-[#232325]/80 border border-white/20 shadow-lg transition duration-300 hover:bg-[#232325]/60 cursor-pointer">
+              <span className="bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
                 Get In Touch
               </span>
             </span>
@@ -114,7 +114,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-white mb-8">
               Contact Information
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 w-full px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 w-full">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -123,16 +123,16 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center justify-center gap-2 p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-full text-center"
+                  className="flex flex-col items-center justify-center gap-3 p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-full text-center"
                 >
                   <div className="flex items-center justify-center p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg group-hover:scale-110 transition-transform duration-300">
                     {info.icon}
                   </div>
                   <div className="flex flex-col items-center justify-center w-full">
-                    <h4 className="font-semibold text-white mb-1">
+                    <h4 className="font-semibold text-white mb-2 text-lg">
                       {info.title}
                     </h4>
-                    <p className="text-white break-all w-full">
+                    <p className="text-gray-300 break-words w-full text-sm sm:text-base">
                       {info.value}
                     </p>
                   </div>
@@ -141,11 +141,11 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="text-xl font-semibold text-white mb-6">
+            <div className="mt-12">
+              <h4 className="text-xl font-semibold text-white mb-8">
                 Connect With Me!
               </h4>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-6">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
