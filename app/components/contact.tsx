@@ -38,19 +38,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-6 w-6" />, 
+      icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6" />, 
       title: "Email",
       value: "rezakazmi2005@gmail.com",
       link: "rezakazmi2005@gmail.com"
     },
     {
-      icon: <MapPin className="h-6 w-6" />, 
+      icon: <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />, 
       title: "Location",
       value: "Houston, TX",
       link: "#"
     },
     {
-      icon: <Phone className="h-6 w-6" />, 
+      icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6" />, 
       title: "Phone",
       value: "+1 (469) 748-6707",
       link: "tel:+15551234567"
@@ -59,19 +59,19 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: <Github className="h-6 w-6" />, 
+      icon: <Github className="h-5 w-5 sm:h-6 sm:w-6" />, 
       name: "GitHub",
   url: "https://github.com/rhkazmi2005",
   color: "hover:text-red-600"
     },
     {
-      icon: <Linkedin className="h-6 w-6" />, 
+      icon: <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />, 
       name: "LinkedIn",
   url: "https://www.linkedin.com/in/reza-kazmi/",
   color: "hover:text-red-600"
     },
     {
-      icon: <FileText className="h-6 w-6" />,
+      icon: <FileText className="h-5 w-5 sm:h-6 sm:w-6" />,
       name: "Resume",
       url: "/resume.pdf", // You'll need to add your resume PDF file to the public folder
       color: "hover:text-red-600"
@@ -114,7 +114,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-white mb-8">
               Contact Information
             </h3>
-            <div className="flex flex-row gap-6 mb-8 justify-center items-stretch w-full px-2 whitespace-nowrap overflow-x-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 w-full px-4">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -123,7 +123,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center justify-center gap-2 p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-[300px] flex-shrink-0 break-all text-center mx-2 align-top"
+                  className="flex flex-col items-center justify-center gap-2 p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-full text-center"
                 >
                   <div className="flex items-center justify-center p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg group-hover:scale-110 transition-transform duration-300">
                     {info.icon}
@@ -141,11 +141,11 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">
-            
+            <div className="mt-8">
+              <h4 className="text-xl font-semibold text-white mb-6">
+                Connect With Me
               </h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
@@ -156,7 +156,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`p-3 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 text-gray-300 ${social.color}`}
+                    className={`p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 text-gray-300 ${social.color}`}
                   >
                     {social.icon}
                   </motion.a>
