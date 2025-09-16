@@ -143,7 +143,7 @@ const Contact = () => {
             {/* Social Links */}
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-white mb-6">
-                Connect With Me
+                Connect With Me!
               </h4>
               <div className="flex flex-wrap justify-center gap-4">
                 {socialLinks.map((social, index) => (
