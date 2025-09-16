@@ -1,0 +1,94 @@
+/* From Uiverse.io by jeremyssocial */ 
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 8.2em;
+  } /* adjusted for "Hi, I'm Reza" */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.terminal-loader {
+  border: 0.1em solid #4a1818;
+  background-color: rgba(35, 35, 37, 0.8);
+  color: #ef4444;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+  padding: 1.5em 1em;
+  width: 12em;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #2d1515;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #ef4444;
+}
+
+.control.minimize {
+  background-color: #b91c1c;
+}
+
+.control.maximize {
+  background-color: #7f1d1d;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid #ef4444; /* Red cursor */
+  animation:
+    typeAndDelete 6s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
