@@ -3,10 +3,6 @@
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import React from "react";
 import { motion } from "motion/react";
-import TerminalLoader from '@/components/ui/terminal-loader';
-
-// In your component:
-<TerminalLoader text="Hello World..." title="Terminal" />
 const About = () => {
   return (
   <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
@@ -27,13 +23,7 @@ const About = () => {
               </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-            <div className="flex justify-center items-center">
-              <TerminalLoader 
-                text="Hi, I'm Reza" 
-                title="About.exe" 
-              />
-            </div>
-            <p className="text-lg text-white max-w-3xl mx-auto mt-8">
+            <p className="text-lg text-white max-w-3xl mx-auto">
               A Computer Information Systems student at the University of Houston with hands-on experience in 
               Python development, UI/UX design, and systems configuration, 
               seeking a 2025 IT Analyst/Cybersecurity internship. 
