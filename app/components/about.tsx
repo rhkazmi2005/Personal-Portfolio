@@ -1,13 +1,12 @@
 "use client";
 
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import React from "react";
 import { motion } from "motion/react";
 const About = () => {
   return (
-  <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
+    <div className="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
       <section id="about">
-  <div className="max-w-6xl mx-auto bg-transparent p-8">
+        <div className="max-w-6xl mx-auto bg-transparent p-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -24,16 +23,14 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
             <p className="text-lg text-white max-w-3xl mx-auto">
-              A Computer Information Systems student at the University of Houston with hands-on experience in 
-              Python development, UI/UX design, and systems configuration, 
-              seeking a 2025 IT Analyst/Cybersecurity internship. 
+              I study Computer Information Systems at the University of Houston. I focus on building reliable and efficient digital systems. I enjoy learning new tools, exploring new environments, and improving how systems work. I like challenging problems and I take a steady, thoughtful approach. I am looking for an internship where I support real projects, learn from experienced teams, and use my skills to improve technical operations.
             </p>
           </motion.div>
 
           {/* My Journey section removed as requested */}
         </div>
       </section>
-    </HeroHighlight>
+    </div>
   );
 };
 

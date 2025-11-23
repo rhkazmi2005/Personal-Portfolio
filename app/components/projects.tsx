@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ExternalLink, Github, Calendar, Code, Palette, Database } from "lucide-react";
 import { EvervaultCard } from "@/components/ui/evervault-card";
 
@@ -93,7 +92,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-  <HeroHighlight containerClassName="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
+    <div className="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
       <section id="projects" className="w-full">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -196,7 +195,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
-    </HeroHighlight> // ← THIS CLOSING TAG WAS MISSING
+    </div>
   );
 };
 

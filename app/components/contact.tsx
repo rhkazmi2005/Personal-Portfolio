@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, FileText, Twitter, Instagram } from "lucide-react";
 
 const Contact = () => {
@@ -79,7 +78,7 @@ const Contact = () => {
   ];
 
   return (
-  <HeroHighlight containerClassName="py-12 px-4 sm:px-6 bg-black min-h-screen flex items-center justify-center">
+    <div className="py-12 px-4 sm:px-6 bg-black min-h-screen flex items-center justify-center">
       <section id="contact" className="w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -168,7 +167,7 @@ const Contact = () => {
         </div>
         </div>
       </section>
-    </HeroHighlight>
+    </div>
   );
 };
 
