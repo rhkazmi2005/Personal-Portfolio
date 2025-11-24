@@ -18,7 +18,7 @@ const Home = () => {
         className="flex items-center justify-center min-h-screen"
         containerClassName="absolute inset-0"
       >
-        <div className="relative z-10 w-full py-6 px-2">
+        <div className="relative z-10 w-full py-16 px-4 sm:px-6 lg:px-8">
           <section id="home" className="w-full">
             <div className="max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
               <motion.div

@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "motion/react";
 const About = () => {
   return (
-    <div className="py-6 px-2 bg-black min-h-screen flex items-center justify-center">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black min-h-screen flex items-center justify-center">
       <section id="about">
-        <div className="max-w-6xl mx-auto bg-transparent p-8">
+        <div className="max-w-6xl mx-auto bg-transparent">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
