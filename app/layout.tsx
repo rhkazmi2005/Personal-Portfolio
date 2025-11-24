@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   description: "Personal portfolio showcasing my projects, skills, and experience as a developer",
   keywords: ["portfolio", "developer", "web development", "react", "nextjs", "typescript"],
   authors: [{ name: "Reza" }],
+  icons: {
+    icon: [
+      {
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><text x='16' y='22' font-family='Arial' font-size='18' font-weight='bold' fill='%23ef4444' text-anchor='middle'>RK</text></svg>",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   openGraph: {
     title: "Reza - Portfolio",
     description: "Personal portfolio showcasing my projects, skills, and experience as a developer",
