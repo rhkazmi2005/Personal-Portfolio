@@ -102,12 +102,9 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-              <span className="inline-block px-8 py-3 rounded-full bg-white/10 border border-white/20 shadow-lg backdrop-blur-md">
-                <span className="bg-gradient-to-r from-red-400 via-red-600 to-red-700 bg-clip-text text-transparent text-4xl md:text-5xl font-bold tracking-tight">
-                  My Projects
-                </span>
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-white">My</span>
+              <span className="text-red-500 ml-2">Projects</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
 

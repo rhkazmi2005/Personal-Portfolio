@@ -88,12 +88,9 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-4">
-            <span className="group inline-block px-4 sm:px-8 py-2 sm:py-3 rounded-full bg-[#232325]/80 border border-white/20 shadow-lg transition duration-300 hover:bg-[#232325]/60 cursor-pointer">
-              <span className="bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-                Get In Touch
-              </span>
-            </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-white">Get In</span>
+            <span className="text-red-500 ml-2">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
           <p className="text-lg text-white max-w-3xl mx-auto"> 
@@ -122,7 +119,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center justify-center gap-3 p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group w-full text-center"
+                  className="flex flex-col items-center justify-center gap-3 p-6 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-600 group w-full text-center"
                 >
                   <div className="flex items-center justify-center p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg group-hover:scale-110 transition-transform duration-300">
                     {info.icon}
@@ -155,7 +152,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`p-4 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 text-gray-300 ${social.color}`}
+                    className={`p-4 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-600 text-white ${social.color}`}
                   >
                     {social.icon}
                   </motion.a>
