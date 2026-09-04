@@ -10,11 +10,38 @@ const GitHubSVG = ({ className }: { className?: string }) => (
 
 const projects = [
   {
+    id: 6,
+    title: "Enterprise Asset Security Dashboard",
+    description:
+      "Developed an enterprise security dashboard providing visibility across 1,600+ managed endpoints by consolidating security and asset data from multiple platforms into a centralized reporting solution. It enabled identification of unmanaged assets, protection gaps, and remediation priorities through interactive reporting.",
+    tools: ["Power BI", "Entra ID", "Intune", "SentinelOne", "Tenable", "Active Directory", "Halo ITSM", "ThreatLocker"],
+    date: "2026",
+    winner: false,
+  },
+  {
+    id: 7,
+    title: "Honeypot & SIEM Labs",
+    description:
+      "Deployed SIEM environments with Windows and Linux endpoints to monitor simulated attacks. Configured log collection, file integrity monitoring, vulnerability detection, and MITRE ATT&CK mapping using Azure Sentinel and Wazuh.",
+    tools: ["Azure Sentinel", "Wazuh", "VMware", "Ubuntu", "Windows 10", "KQL"],
+    date: "2026",
+    winner: false,
+  },
+  {
+    id: 8,
+    title: "AWS Scalable 3-Tier Web Application",
+    description:
+      "Designed and deployed a secure 3-tier cloud computing architecture on AWS using EC2, RDS, S3, and Lambda across public and private subnets within a custom VPC. Configured Application Load Balancers and Auto Scaling Groups to ensure high availability and fault tolerance while implementing security groups, route tables, and IAM policies for network segmentation and least-privilege access.",
+    tools: ["AWS", "EC2", "RDS", "S3", "Lambda", "VPC"],
+    date: "2026",
+    winner: false,
+  },
+  {
     id: 1,
     title: "Python Inventory Manager",
     description:
       "A Python-based inventory management system that processes electronic device inventory data, generates detailed reports, and provides an interactive command-line tool for querying and recommendations.",
-    technologies: ["Python", "HTML"],
+    tools: ["Python", "HTML"],
     githubUrl: "https://github.com/rhkazmi2005/Python-Inventory-Manager",
     date: "2025",
     winner: false,
@@ -24,7 +51,7 @@ const projects = [
     title: "FLEX",
     description:
       "FLEX is a web platform built at HackMISSO 2025. Designed the UI/UX and led frontend development. Winner of Best Overall Hack.",
-    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Figma", "Vercel", "Shadcn/ui"],
+    tools: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Figma", "Vercel", "Shadcn/ui"],
     liveUrl:
       "https://www.figma.com/proto/FtDOXcI0WTDM8UapmXWuKd/HackMISSO-25?node-id=68-1228&t=4G1jxsrVpgZB1HGX-1&starting-point-node-id=68%3A1228",
     slideshowUrl:
@@ -76,12 +103,17 @@ const Projects = () => {
 
                     <p className="text-slate-300 leading-relaxed mb-4">{project.description}</p>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <span key={tech} className="px-2.5 py-1 text-xs rounded-full border border-slate-700 bg-slate-900/80 text-slate-200">
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="mt-5 pt-2">
+                      <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.22em] text-slate-400">
+                        Tools
+                      </p>
+                      <div className="flex flex-wrap gap-2.5">
+                        {project.tools.map((tool) => (
+                          <span key={tool} className="px-3 py-1.5 text-xs rounded-full border border-slate-700 bg-slate-900/80 text-slate-200 shadow-sm">
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
@@ -110,7 +142,7 @@ const Projects = () => {
                             Slideshow
                           </a>
                         </>
-                      ) : (
+                      ) : project.githubUrl ? (
                         <a
                           href={project.githubUrl}
                           target="_blank"
@@ -120,7 +152,7 @@ const Projects = () => {
                         >
                           <GitHubSVG className="h-5 w-5" />
                         </a>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>
