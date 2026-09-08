@@ -14,7 +14,7 @@ export default function Portfolio() {
       <About />
       <Projects />
       <Contact />
-      <footer className="mt-8 py-6 text-center text-base text-slate-400 font-medium">
+      <footer className="mt-8 border-t border-zinc-900 px-4 pt-6 pb-12 text-center text-base text-slate-400 font-medium">
         Reza Kazmi © 2026
       </footer>
     </main>
