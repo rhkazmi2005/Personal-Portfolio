@@ -3,6 +3,21 @@
 import React from "react";
 import { motion } from "motion/react";
 
+const photographyImages = [
+  {
+    src: "/volcano forest.jpg",
+    alt: "Foggy forest photography shot",
+  },
+  {
+    src: "/fuego volcano eruption.jpg",
+    alt: "Fuego volcano eruption photo",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80",
+    alt: "Nature landscape photograph",
+  },
+];
+
 const About = () => {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 bg-black min-h-screen flex items-center justify-center">
@@ -33,6 +48,39 @@ const About = () => {
             </div>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mt-14"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+              Photography
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {photographyImages.map((image, index) => (
+                <div
+                  key={image.alt}
+                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111] shadow-lg shadow-red-500/5"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="h-[26rem] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <div className="px-5 pb-5 pt-4">
+                    <p className="text-sm md:text-base text-white/80">
+                      {index === 0 && "Volcano Forest"}
+                      {index === 1 && "Fuego Volcano Eruption"}
+                      {index === 2 && "Nature and landscapes"}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
