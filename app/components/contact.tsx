@@ -127,7 +127,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 p-5 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl border border-slate-600 group hover:border-red-500/50 transition-colors duration-300"
+                    className="flex items-center gap-4 p-5 bg-zinc-950 rounded-xl border border-zinc-800 group hover:bg-zinc-900 hover:border-red-500/50 transition-colors duration-300"
                   >
                     <div className="p-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg group-hover:scale-110 transition-transform duration-300 shrink-0">
                       {info.icon}
