@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Send, FileText } from "lucide-react";
+import { Mail, Phone, MapPin, FileText } from "lucide-react";
 
 const GitHubSVG = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -14,9 +14,6 @@ const LinkedInSVG = ({ className }: { className?: string }) => (
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
 );
-
-// Sign up at formspree.io, create a form, then replace YOUR_FORM_ID below.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 const contactInfo = [
   {
@@ -58,36 +55,6 @@ const socialLinks = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  const inputClass =
-    "w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors duration-200";
-
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 bg-black min-h-screen flex items-center justify-center">
       <section id="contact" className="w-full">
@@ -109,8 +76,7 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left — contact info + socials */}
+          <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -161,69 +127,6 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Right — contact form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-8">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name"
-                    required
-                    className={inputClass}
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your Email"
-                    required
-                    className={inputClass}
-                  />
-                </div>
-                <input
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject"
-                  required
-                  className={inputClass}
-                />
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  required
-                  rows={6}
-                  className={inputClass + " resize-none"}
-                />
-
-                {status === "success" && (
-                  <p className="text-green-400 text-sm">Message sent! I&apos;ll get back to you soon.</p>
-                )}
-                {status === "error" && (
-                  <p className="text-red-400 text-sm">Something went wrong. Please try emailing me directly.</p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-red-500 to-red-700 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-red-500/20 hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  <Send className="h-4 w-4" />
-                  {status === "sending" ? "Sending…" : "Send Message"}
-                </button>
-              </form>
-            </motion.div>
           </div>
         </div>
       </section>
