@@ -63,7 +63,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black min-h-screen flex items-center justify-center">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-black min-h-screen flex items-center justify-center">
       <section id="projects" className="w-full">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -71,7 +71,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-white">My</span>
