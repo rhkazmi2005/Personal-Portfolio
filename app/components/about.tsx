@@ -65,7 +65,11 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
             <p className="text-lg text-white max-w-3xl mx-auto">
-              I study Computer Information Systems at the University of Houston. I focus on building reliable and efficient digital systems. I enjoy learning new tools, exploring new environments, and improving how systems work. I like challenging problems and I take a steady, thoughtful approach. I am looking for an internship where I support real projects, learn from experienced teams, and use my skills to improve technical operations.
+              Hey, I’m Reza. I study Computer Information Systems at the University of Houston and have experience working in cybersecurity. I’m most interested in security operations and cloud security, and I’m always trying to learn more about the field.
+
+              When I’m not focused on school or work, I’m usually at the gym, riding my bike, taking film photos, or planning a trip somewhere new.
+
+              I made this website to share my projects, experiences, and some of the things I enjoy outside of technology.
             </p>
           </motion.div>
 
