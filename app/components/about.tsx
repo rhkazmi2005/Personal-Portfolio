@@ -9,7 +9,7 @@ const photographyImages = [
     alt: "Foggy forest photography shot",
   },
   {
-    src: "/fuego volcano eruption.jpg",
+    src: "/Fuego Volcano Eruption.jpg",
     alt: "Fuego volcano eruption photo",
   },
   {
