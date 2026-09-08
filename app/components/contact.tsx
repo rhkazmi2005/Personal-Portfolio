@@ -71,9 +71,6 @@ const Contact = () => {
               <span className="text-red-500 ml-2">Touch</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-700 mx-auto mb-8"></div>
-            <p className="text-lg text-white max-w-3xl mx-auto">
-              Please do not hesitate to contact me with any questions or inquiries!
-            </p>
           </motion.div>
 
           <div className="max-w-2xl">
