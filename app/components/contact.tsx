@@ -119,7 +119,7 @@ const Contact = () => {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     title={social.name}
-                    className="p-4 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl border border-slate-600 text-white hover:text-red-400 hover:border-red-500/50 transition-all duration-300"
+                    className="p-4 bg-zinc-950 rounded-xl border border-zinc-800 text-red-400 hover:text-red-300 hover:border-red-500/50 transition-all duration-300"
                   >
                     {social.icon}
                   </motion.a>
