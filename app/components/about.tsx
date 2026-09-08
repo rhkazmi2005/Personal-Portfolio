@@ -13,8 +13,8 @@ const photographyImages = [
     alt: "Fuego volcano eruption photo",
   },
   {
-    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80",
-    alt: "Nature landscape photograph",
+    src: "/Medellín.jpg",
+    alt: "Medellin photo",
   },
 ];
 
@@ -74,7 +74,7 @@ const About = () => {
                     <p className="text-sm md:text-base text-white/80">
                       {index === 0 && "Volcano Forest"}
                       {index === 1 && "Fuego Volcano Eruption"}
-                      {index === 2 && "Nature and landscapes"}
+                      {index === 2 && "Medellin"}
                     </p>
                   </div>
                 </div>
